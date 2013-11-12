@@ -1,26 +1,98 @@
 recipes:
-    global:
-        - applications::create_var_chef_cache
-        - applications::google-chrome
-        - applications::firefox
-        - applications::java
-        - applications::vlc
-    mac_os_x:
-        - applications::adobe_reader
-        - drivers::xerox550
-        - osxdefaults::add_note_to_loginscreen
-        - osxdefaults::disable_auto-correct
-        - osxdefaults::enable_subpixel_font_rendering_on_non-apple_lcds
-        - osxdefaults::finder_small_sidebar_icon_size
-        - osxdefaults::automatically_illuminate_built-in_macbook_keyboard_in_low_light
-        - osxdefaults::automatically_quit_printer_app_once_the_print_jobs_complete
-        - osxdefaults::avoid_creating_ds_store_files_on_network_volumes
-        - osxdefaults::disable_resume_system-wide
-        - osxdefaults::save_screenshots_in_png_format
-        - osxdefaults::save_screenshots_to_the_desktop
-        - applications::bash
+  # chef setup
+  - applications::create_var_chef_cache
+
+  # osx system settings
+  - dotfiles::inputrc
+  - osxdefaults::add_note_to_loginscreen
+  - osxdefaults::set_screensaver_preferences
+  - osxdefaults::disable_natural_scrolling
+  - osxdefaults::set_a_blazingly_fast_keyboard_repeat_rate
+  - osxdefaults::automatically_quit_printer_app_once_the_print_jobs_complete
+  - osxdefaults::check_for_software_updates_daily
+  - osxdefaults::disable_press-and-hold_for_keys_in_favor_of_key_repeat
+  - osxdefaults::terminal_preferences
+  - osxdefaults::dock_set_magnification_on
+  - osxdefaults::dock_set_the_icon_size_of_dock_items_to_36_pixels
+  - osxdefaults::dock_do_not_animate_opening_applications_from_the_dock
+  - osxdefaults::enable_safari_debug_menu
+  - osxdefaults::finder_display_full_path
+  - osxdefaults::finder_set_preferred_view_style
+  - osxdefaults::finder_show_all_files
+  - osxdefaults::finder_show_file_extensions
+  - osxdefaults::finder_disable_the_warning_when_changing_a_file_extension
+  - osxdefaults::save_to_disk_not_to_iCloud_by_default
+  - osxdefaults::menu_show_clock_with_date
+
+  # general development
+  - dotfiles::bash_it
+  - applications::git
+  - dotfiles::gitconfig
+  - dotfiles::projects
+
+  # rails development stack
+  - dotfiles::gem_setup
+  - applications::rbenv
+  - applications::nodejs
+  - applications::phantomjs
+  - applications::heroku
+  - applications::virtualbox
+  - applications::vagrant
+
+  # development tools
+  - applications::sublime_text_3
+  - applications::google-chrome
+  - applications::firefox
+  - applications::github_for_mac
+  - applications::mou
+
+  # system utilities
+  - osxdefaults::enable_assistive_devices
+  - applications::sizeup
+
 attributes:
-    drivers:
-        xerox: 172.18.19.67
-    osxdefaults:
-        loginmessage: Property of Kunstmaan NV - 016 300 780 - hello@kunstmaan.be
+  osxdefaults:
+    loginmessage: Property of The Garage @ UHG
+  workspace_directory: Projects
+  dotfiles:
+    project_dir: Projects
+    projects:
+      -
+        - thegarage-gitx
+        - https://github.com/thegarage/thegarage-gitx.git
+      -
+        - chef-osxdefaults
+        - https://github.com/wireframe/chef-osxdefaults.git
+      -
+        - chef-applications
+        - https://github.com/wireframe/chef-applications.git
+      -
+        - chef-dotfiles
+        - https://github.com/wireframe/chef-dotfiles.git
+
+  rbenv:
+    default_ruby: "2.0.0-p247"
+    rubies:
+      2.0.0-p247: {}
+  vagrant_plugins:
+    - vagrant-berkshelf
+    - vagrant-omnibus
+  terminal:
+    color_scheme: "Pro"
+  bash_it:
+    theme: tylenol
+    enabled_plugins:
+      completion:
+        - defaults
+        - bash-it
+        - git
+        - brew
+        - gem
+        - rake
+        - ssh
+      plugins:
+        - git
+        - ssh
+        - ruby
+        - rbenv
+        - vagrant

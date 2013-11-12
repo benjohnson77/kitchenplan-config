@@ -1,15 +1,11 @@
-site "http://community.opscode.com/api/v1"
+site 'http://community.opscode.com/api/v1'
 
-cookbook "dmg"
-cookbook "apt"
-cookbook "apache2",               :github => "opscode-cookbooks/apache2"
-cookbook "percona",               :github => "thomasmeeus/chef-percona"
-cookbook "newrelic",              :github => "escapestudios/chef-newrelic"
-cookbook "rvm",                   :github => "fnichol/chef-rvm"
-cookbook "applications",          :github => "kitchenplan/chef-applications"
-cookbook "osxdefaults",           :github => "kitchenplan/chef-osxdefaults"
-cookbook "dotfiles",              :github => "kitchenplan/chef-dotfiles"
-cookbook "drivers",               :github => "kitchenplan/chef-drivers"
-cookbook "composer",              :github => "kitchenplan/chef-composer"
-cookbook "pivotal-workstation",   :github => "pivotal/pivotal_workstation"
-cookbook "root_ssh_agent",        :github => "dergachev/chef_root_ssh_agent"
+# kitchenplan cookbooks v2
+cookbook 'applications', :github => 'wireframe/chef-applications'
+cookbook 'osxdefaults', :github => 'wireframe/chef-osxdefaults'
+cookbook 'dotfiles', :github => 'wireframe/chef-dotfiles'
+
+# for local development mode
+# cookbook 'applications', :path => '/Users/virtualryan/Projects/chef-applications'
+# cookbook 'osxdefaults', :path => '/Users/virtualryan/Projects/chef-osxdefaults'
+# cookbook 'dotfiles', :path => '/Users/virtualryan/Projects/wireframe/chef-dotfiles'

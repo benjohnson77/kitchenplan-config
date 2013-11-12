@@ -1,0 +1,12 @@
+# groups:
+#   - bash
+#   - developer
+#   - smartie
+recipes:
+  global:
+    - applications::evernote
+
+attributes:
+  git:
+    name: Ryan Sonnek
+    email: ryan@codecrate.com
