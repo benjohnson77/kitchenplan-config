@@ -1,0 +1,20 @@
+groups:
+  - developer
+
+recipes:
+  global:
+    - applications::evernote
+
+attributes:
+  git:
+    name: Ryan Sonnek
+    email: ryan@codecrate.com
+    aliases:
+      put: push origin HEAD
+      done: commit -a -m
+      co: checkout
+      undo: reset --hard
+      ll: log --summary --stat --pretty=oneline --relative-date
+      who: shortlog -n -s --no-merges
+      lg: log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+      cleanup: "!~/bin/git-cleanup.sh"
