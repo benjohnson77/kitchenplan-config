@@ -1,43 +1,67 @@
 recipes:
-    global:
-        - applications::git
-        - applications::wget
-        - applications::pwgen
-        - applications::xmlstarlet
-        - applications::pv
-        - applications::htop
-        - dotfiles::gitconfig
-        - applications::grunt-cli
-        - applications::bower
-        - applications::git-flow
-        - applications::sass
-        - applications::siege
-        - applications::nodejs
-        - applications::ssh_config
-        - dotfiles::vim
-        - applications::composer
-    mac_os_x:
-        - applications::imageoptim
-        - applications::imagealpha
-        - applications::svgo
-        - applications::sublime_text_3
-        - applications::phpstorm
-        - applications::codekit
-        - applications::espresso
-        - applications::watch
-        - applications::gnu-tar
-        - applications::sequelpro
-        - applications::sourcetree
-        - osxdefaults::set_terminal_profile
-        - osxdefaults::add_a_context_menu_item_for_showing_the_web_inspector_in_web_views
-        - osxdefaults::disable_press-and-hold_for_keys_in_favor_of_key_repeat
-        - osxdefaults::enable_safari_debug_menu
-        - osxdefaults::set_a_blazingly_fast_keyboard_repeat_rate
-    debian:
-        - applications::performance_scheduler
-        - applications::nscd
-        - applications::locales
-        - applications::pureftpd
-        - applications::xvfb
-        - applications::pidgin
-        - applications::ubuntu-desktop
+  global:
+    # general development
+    - dotfiles::bash_it
+    - applications::git
+    - dotfiles::gitconfig
+    - dotfiles::projects
+
+    # rails development stack
+    - dotfiles::gem_setup
+    - applications::rbenv
+    - applications::nodejs
+    - applications::phantomjs
+    - applications::heroku
+    - applications::virtualbox
+    - applications::vagrant
+
+    # development tools
+    - applications::sublime_text_3
+    - applications::google-chrome
+    - applications::firefox
+    - applications::github_for_mac
+    - applications::mou
+
+attributes:
+  workspace_directory: Projects
+  dotfiles:
+    project_dir: Projects
+    projects:
+      -
+        - thegarage-gitx
+        - https://github.com/thegarage/thegarage-gitx.git
+      -
+        - chef-osxdefaults
+        - https://github.com/wireframe/chef-osxdefaults.git
+      -
+        - chef-applications
+        - https://github.com/wireframe/chef-applications.git
+      -
+        - chef-dotfiles
+        - https://github.com/wireframe/chef-dotfiles.git
+  rbenv:
+    default_ruby: "2.0.0-p247"
+    rubies:
+      2.0.0-p247: {}
+  vagrant_plugins:
+    - vagrant-berkshelf
+    - vagrant-omnibus
+  terminal:
+    color_scheme: "Pro"
+  bash_it:
+    theme: tylenol
+    enabled_plugins:
+      completion:
+        - defaults
+        - bash-it
+        - git
+        - brew
+        - gem
+        - rake
+        - ssh
+      plugins:
+        - git
+        - ssh
+        - ruby
+        - rbenv
+        - vagrant

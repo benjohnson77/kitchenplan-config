@@ -1,7 +1,6 @@
-# groups:
-#   - bash
-#   - developer
-#   - smartie
+groups:
+  - developer
+
 recipes:
   global:
     - applications::evernote
