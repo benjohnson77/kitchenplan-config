@@ -17,7 +17,7 @@ To get started, install the latest XCode (5.0.1 at this point) and the latest CL
 Now, to get Kitchenplan on your computer, run the following commands:
 
 ```bash
-$ ruby -e "$(curl -fsSL https://raw.github.com/kitchenplan/kitchenplan/go)"
+$ ruby -e "$(curl -fsSL https://raw.github.com/kitchenplan/kitchenplan/master/go)"
 ```
 
 ### Custom Repository
@@ -28,7 +28,7 @@ The `KITCHENPLAN_REPO` environment variable can be set before installation to cu
 
 ```bash
 $ export KITCHENPLAN_REPO=https://github.com/mycompany/kitchenplan
-$ ruby -e "$(curl -fsSL https://raw.github.com/kitchenplan/kitchenplan/go)"
+$ ruby -e "$(curl -fsSL https://raw.github.com/kitchenplan/kitchenplan/master/go)"
 ```
 
 ### Custom Recipes

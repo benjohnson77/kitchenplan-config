@@ -7,7 +7,7 @@
 # with the latest changes before installing new recipes.
 #
 # example execution:
-#   $ ruby -e "$(curl -fsSL https://raw.github.com/kitchenplan/kitchenplan/go)"
+#   $ ruby -e "$(curl -fsSL https://raw.github.com/kitchenplan/kitchenplan/master/go)"
 #
 # execution can be customized by the following environmental variables:
 # KITCHENPLAN_PATH - kitchenplan installation path (defaults to /opt/kitchenplan)
