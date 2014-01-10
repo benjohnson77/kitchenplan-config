@@ -34,3 +34,4 @@ recipes:
 attributes:
   osxdefaults:
     loginmessage: Property of The Garage @ UHG
+    remote_desktop_config: -activate -configure -access -on -restart -agent -privs -all -allowAccessFor -specifiedUsers -users garageadmin
