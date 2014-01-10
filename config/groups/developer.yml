@@ -40,9 +40,9 @@ attributes:
         - chef-dotfiles
         - https://github.com/thegarage/chef-dotfiles.git
   rbenv:
-    default_ruby: "2.0.0-p247"
+    default_ruby: "2.0.0-p353"
     rubies:
-      2.0.0-p247: {}
+      2.0.0-p353: {}
   vagrant_plugins:
     - vagrant-berkshelf
     - vagrant-omnibus
