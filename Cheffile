@@ -1,9 +1,9 @@
 site 'http://community.opscode.com/api/v1'
 
 # kitchenplan cookbooks v2
-cookbook 'applications', :github => 'wireframe/chef-applications'
-cookbook 'osxdefaults', :github => 'wireframe/chef-osxdefaults'
-cookbook 'dotfiles', :github => 'wireframe/chef-dotfiles'
+cookbook 'applications', :github => 'thegarage/chef-applications'
+cookbook 'osxdefaults', :github => 'thegarage/chef-osxdefaults'
+cookbook 'dotfiles', :github => 'thegarage/chef-dotfiles'
 
 # for local development mode
 # cookbook 'applications', :path => '/Users/virtualryan/Projects/chef-applications'
