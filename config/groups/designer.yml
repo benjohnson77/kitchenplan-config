@@ -1,3 +1,0 @@
-recipes:
-  global:
-    - applications::tower

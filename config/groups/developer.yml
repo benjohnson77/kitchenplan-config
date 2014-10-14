@@ -8,7 +8,7 @@ recipes:
 
     # rails development stack
     - dotfiles::gem_setup
-    - applications::rbenv
+    - applications::rvm
     - applications::nodejs
     - applications::phantomjs
     - applications::heroku
@@ -23,26 +23,10 @@ recipes:
     - applications::mou
 
 attributes:
-  workspace_directory: Projects
-  dotfiles:
-    project_dir: Projects
-    projects:
-      -
-        - thegarage-gitx
-        - https://github.com/thegarage/thegarage-gitx.git
-      -
-        - chef-osxdefaults
-        - https://github.com/thegarage/chef-osxdefaults.git
-      -
-        - chef-applications
-        - https://github.com/thegarage/chef-applications.git
-      -
-        - chef-dotfiles
-        - https://github.com/thegarage/chef-dotfiles.git
-  rbenv:
-    default_ruby: "2.0.0-p353"
+  rvm:
+    default_ruby: "2.0.0-p451"
     rubies:
-      2.0.0-p353: {}
+      2.0.0-p451: {}
   vagrant_plugins:
     - vagrant-berkshelf
     - vagrant-omnibus
@@ -63,5 +47,5 @@ attributes:
         - git
         - ssh
         - ruby
-        - rbenv
+        - rvm
         - vagrant

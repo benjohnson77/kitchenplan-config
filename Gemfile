@@ -1,5 +1,3 @@
 source "https://rubygems.org"
 
-gem "chef"
-gem "librarian-chef"
-gem "ohai"
+gem "librarian-chef", "~> 0.0.2"
