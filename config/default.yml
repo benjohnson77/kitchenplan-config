@@ -6,7 +6,6 @@ recipes:
     # osx system settings
     - dotfiles::inputrc
     - osxdefaults::add_note_to_loginscreen
-    - osxdefaults::set_screensaver_preferences
     - osxdefaults::disable_natural_scrolling
     - osxdefaults::set_a_blazingly_fast_keyboard_repeat_rate
     - osxdefaults::automatically_quit_printer_app_once_the_print_jobs_complete
@@ -25,6 +24,7 @@ recipes:
     - osxdefaults::save_to_disk_not_to_iCloud_by_default
     - osxdefaults::menu_show_clock_with_date
     - osxdefaults::set_computer_name
+    - osxdefaults::avoid_creating_ds_store_files_on_network_volumes
 
     # system utilities
     - osxdefaults::enable_assistive_devices
