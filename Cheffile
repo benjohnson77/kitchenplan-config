@@ -9,3 +9,12 @@ cookbook 'dotfiles', :github => 'thegarage/chef-dotfiles'
 # cookbook 'applications', :path => '/Users/virtualryan/Projects/chef-applications'
 # cookbook 'osxdefaults', :path => '/Users/virtualryan/Projects/chef-osxdefaults'
 # cookbook 'dotfiles', :path => '/Users/virtualryan/Projects/chef-dotfiles'
+
+cookbook "homebrewalt",           :github => "kitchenplan/chef-homebrewalt"
+# cookbook "nodejs",                :github => "kitchenplan/chef-nodejs"
+# cookbook "applications",          :github => "kitchenplan/chef-applications"
+# cookbook "osxdefaults",           :github => "kitchenplan/chef-osxdefaults"
+# cookbook "dotfiles",              :github => "kitchenplan/chef-dotfiles"
+# cookbook "drivers",               :github => "kitchenplan/chef-drivers"
+cookbook "sudoalt",               :github => "kitchenplan/chef-sudoalt"
+cookbook "dmg",                   :github => "opscode-cookbooks/dmg",           :ref => "v2.1.4"
